@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 
 {% block content %}
+
 <br>
 <div class="row">
     <div class="col-md-6">
@@ -8,7 +9,6 @@
             <form action="" method="POST"> {% csrf_token %}
                 {{ formset.management_form }}
                 {% for form in formset %}
-                    {{ form.errors }}
                     {{ form }} <hr> 
                 {% endfor %}
                 <input type="Submit" name="Submit">
